@@ -9,7 +9,7 @@
             "display": [
                 {
                     "label": "label",
-                    "text": "${label}",
+                    "text": ${label},
                     "type": "text"
                 },
                 {
