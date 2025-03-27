@@ -1,50 +1,35 @@
 {
     "nodes": [
         {
-            "node": "Gene",
+            "node": "Publications",
             "example": [
-                "COPB2",
-                "STAT3"
+                39615218,
+                39827879
             ],
             "display": [
-                {
-                    "label": "Gene ID",
-                    "text": "${id}",
-                    "type": "text"
-                },
                 {
                     "label": "label",
                     "text": "${label}",
                     "type": "text"
                 },
                 {
-                    "label": "uri",
-                    "text": "${uri}",
-                    "href": "${uri}",
-                    "type": "link"
-                }
-            ],
-            "relation": [],
-            "search": [
-                "id",
-                "label"
-            ]
-        },
-        {
-            "node": "GO Biological Process Term",
-            "example": [
-                "'de novo' posttranslational protein folding (GO:0051084)",
-                "2-oxoglutarate metabolic process (GO:0006103)"
-            ],
-            "display": [
-                {
-                    "label": "GO Biological Process Term ID",
-                    "text": "${id}",
+                    "label": "Title",
+                    "text": "${Title}",
                     "type": "text"
                 },
                 {
-                    "label": "label",
-                    "text": "${label}",
+                    "label": "Authors",
+                    "text": "${Authors}",
+                    "type": "text"
+                },
+                {
+                    "label": "Journal",
+                    "text": "${Journal}",
+                    "type": "text"
+                },
+                {
+                    "label": "Publications ID",
+                    "text": "${id}",
                     "type": "text"
                 }
             ],
@@ -55,20 +40,30 @@
             ]
         },
         {
-            "node": "Mouse Phenotype",
+            "node": "Awards",
             "example": [
-                "abdominal situs ambiguus MP:0011250",
-                "abdominal situs inversus MP:0011249"
+                "5R01DK046865-31",
+                "1R21DK139543-01A1"
             ],
             "display": [
                 {
-                    "label": "Mouse Phenotype ID",
-                    "text": "${id}",
+                    "label": "label",
+                    "text": "${label}",
                     "type": "text"
                 },
                 {
-                    "label": "label",
-                    "text": "${label}",
+                    "label": "Title",
+                    "text": "${Title}",
+                    "type": "text"
+                },
+                {
+                    "label": "Contact",
+                    "text": "${Contact}",
+                    "type": "text"
+                },
+                {
+                    "label": "Awards ID",
+                    "text": "${id}",
                     "type": "text"
                 }
             ],
@@ -79,20 +74,44 @@
             ]
         },
         {
-            "node": "Drug",
+            "node": "Authors",
             "example": [
-                "afatinib",
-                "erlotinib"
+                "Sara Alibrandi",
+                "Angela Clemens"
             ],
             "display": [
                 {
-                    "label": "Drug ID",
-                    "text": "${id}",
+                    "label": "label",
+                    "text": "${label}",
                     "type": "text"
                 },
                 {
+                    "label": "Authors ID",
+                    "text": "${id}",
+                    "type": "text"
+                }
+            ],
+            "relation": [],
+            "search": [
+                "id",
+                "label"
+            ]
+        },
+        {
+            "node": "MeSH",
+            "example": [
+                "14-3-3 Proteins",
+                "3T3-L1 Cells"
+            ],
+            "display": [
+                {
                     "label": "label",
                     "text": "${label}",
+                    "type": "text"
+                },
+                {
+                    "label": "MeSH ID",
+                    "text": "${id}",
                     "type": "text"
                 }
             ],
@@ -106,23 +125,13 @@
     "edges": [
         {
             "match": [
-                "LINCS Up Regulated"
+                "Publications"
             ],
             "selected": true,
             "display": [
                 {
-                    "label": "source",
-                    "text": "${source}",
-                    "type": "text"
-                },
-                {
-                    "label": "relation",
-                    "text": "${relation}",
-                    "type": "text"
-                },
-                {
-                    "label": "target",
-                    "text": "${target}",
+                    "label": "target label",
+                    "text": "${target_label}",
                     "type": "text"
                 },
                 {
@@ -131,36 +140,31 @@
                     "type": "text"
                 },
                 {
-                    "label": "target label",
-                    "text": "${target_label}",
+                    "label": "relation",
+                    "text": "${relation}",
                     "type": "text"
                 },
                 {
-                    "label": "score",
-                    "text": "${score}",
+                    "label": "source",
+                    "text": "${source}",
+                    "type": "text"
+                },
+                {
+                    "label": "target",
+                    "text": "${target}",
                     "type": "text"
                 }
             ]
         },
         {
             "match": [
-                "LINCS Down Regulated"
+                "Awards"
             ],
             "selected": true,
             "display": [
                 {
-                    "label": "source",
-                    "text": "${source}",
-                    "type": "text"
-                },
-                {
-                    "label": "relation",
-                    "text": "${relation}",
-                    "type": "text"
-                },
-                {
-                    "label": "target",
-                    "text": "${target}",
+                    "label": "target label",
+                    "text": "${target_label}",
                     "type": "text"
                 },
                 {
@@ -169,36 +173,31 @@
                     "type": "text"
                 },
                 {
-                    "label": "target label",
-                    "text": "${target_label}",
+                    "label": "relation",
+                    "text": "${relation}",
                     "type": "text"
                 },
                 {
-                    "label": "score",
-                    "text": "${score}",
+                    "label": "source",
+                    "text": "${source}",
+                    "type": "text"
+                },
+                {
+                    "label": "target",
+                    "text": "${target}",
                     "type": "text"
                 }
             ]
         },
         {
             "match": [
-                "GO BP"
+                "MeSH"
             ],
             "selected": true,
             "display": [
                 {
-                    "label": "source",
-                    "text": "${source}",
-                    "type": "text"
-                },
-                {
-                    "label": "relation",
-                    "text": "${relation}",
-                    "type": "text"
-                },
-                {
-                    "label": "target",
-                    "text": "${target}",
+                    "label": "target label",
+                    "text": "${target_label}",
                     "type": "text"
                 },
                 {
@@ -207,39 +206,28 @@
                     "type": "text"
                 },
                 {
-                    "label": "target label",
-                    "text": "${target_label}",
+                    "label": "relation",
+                    "text": "${relation}",
                     "type": "text"
                 },
                 {
-                    "label": "resource",
-                    "text": "${resource}",
-                    "href": "${resource}",
-                    "type": "link"
+                    "label": "source",
+                    "text": "${source}",
+                    "type": "text"
+                },
+                {
+                    "label": "target",
+                    "text": "${target}",
+                    "type": "text"
                 }
             ]
         },
         {
             "match": [
-                "MP"
+                "Awards"
             ],
             "selected": true,
             "display": [
-                {
-                    "label": "source",
-                    "text": "${source}",
-                    "type": "text"
-                },
-                {
-                    "label": "relation",
-                    "text": "${relation}",
-                    "type": "text"
-                },
-                {
-                    "label": "target",
-                    "text": "${target}",
-                    "type": "text"
-                },
                 {
                     "label": "source label",
                     "text": "${source_label}",
@@ -251,17 +239,161 @@
                     "type": "text"
                 },
                 {
-                    "label": "resource",
-                    "text": "${resource}",
-                    "href": "${resource}",
-                    "type": "link"
+                    "label": "relation",
+                    "text": "${relation}",
+                    "type": "text"
+                },
+                {
+                    "label": "source",
+                    "text": "${source}",
+                    "type": "text"
+                },
+                {
+                    "label": "target",
+                    "text": "${target}",
+                    "type": "text"
+                }
+            ]
+        },
+        {
+            "match": [
+                "Awards"
+            ],
+            "selected": true,
+            "display": [
+                {
+                    "label": "source label",
+                    "text": "${source label}",
+                    "type": "text"
+                },
+                {
+                    "label": "target label",
+                    "text": "${target label}",
+                    "type": "text"
+                }
+            ]
+        },
+        {
+            "match": [
+                "Awards"
+            ],
+            "selected": true,
+            "display": [
+                {
+                    "label": "target label",
+                    "text": "${target label}",
+                    "type": "text"
+                },
+                {
+                    "label": "source label",
+                    "text": "${source label}",
+                    "type": "text"
+                }
+            ]
+        },
+        {
+            "match": [
+                "Publications"
+            ],
+            "selected": true,
+            "display": [
+                {
+                    "label": "source label",
+                    "text": "${source_label}",
+                    "type": "text"
+                },
+                {
+                    "label": "target label",
+                    "text": "${target_label}",
+                    "type": "text"
+                },
+                {
+                    "label": "relation",
+                    "text": "${relation}",
+                    "type": "text"
+                },
+                {
+                    "label": "source",
+                    "text": "${source}",
+                    "type": "text"
+                },
+                {
+                    "label": "target",
+                    "text": "${target}",
+                    "type": "text"
+                }
+            ]
+        },
+        {
+            "match": [
+                "MeSH"
+            ],
+            "selected": true,
+            "display": [
+                {
+                    "label": "source label",
+                    "text": "${source_label}",
+                    "type": "text"
+                },
+                {
+                    "label": "target label",
+                    "text": "${target_label}",
+                    "type": "text"
+                },
+                {
+                    "label": "relation",
+                    "text": "${relation}",
+                    "type": "text"
+                },
+                {
+                    "label": "source",
+                    "text": "${source}",
+                    "type": "text"
+                },
+                {
+                    "label": "target",
+                    "text": "${target}",
+                    "type": "text"
+                }
+            ]
+        },
+        {
+            "match": [
+                "Coauthors"
+            ],
+            "selected": true,
+            "display": [
+                {
+                    "label": "source label",
+                    "text": "${source_label}",
+                    "type": "text"
+                },
+                {
+                    "label": "target label",
+                    "text": "${target_label}",
+                    "type": "text"
+                },
+                {
+                    "label": "relation",
+                    "text": "${relation}",
+                    "type": "text"
+                },
+                {
+                    "label": "source",
+                    "text": "${source}",
+                    "type": "text"
+                },
+                {
+                    "label": "target",
+                    "text": "${target}",
+                    "type": "text"
                 }
             ]
         }
     ],
     "header": {
-        "header": "Enrichr-KG",
-        "title": "Enrichr-KG",
+        "header": "Demo-KG",
+        "title": "Demo-KG",
         "background": {
             "backgroundColor": "#000",
             "contrastText": "#FFF"
@@ -269,9 +401,9 @@
         "icon": {
             "src": "https://minio.dev.maayanlab.cloud/enrichr-kg/enrichr-kg.png",
             "favicon": "https://minio.dev.maayanlab.cloud/enrichr-kg/enrichr-kg.png",
-            "faviconTitle": "Enrichr-KG",
-            "alt": "Enrichr-KG",
-            "key": "Enrichr-KG_logo",
+            "faviconTitle": "Demo-KG",
+            "alt": "Demo-KG",
+            "key": "Demo-KG_logo",
             "width": 100,
             "height": 60
         },
@@ -284,8 +416,8 @@
                 "props": {
                     "init_function": "initialize_kg",
                     "initial_query": {
-                        "start": "Gene",
-                        "start_term": "APOE",
+                        "start": "Authors",
+                        "start_term": "Daniel J B Clarke",
                         "start_field": "label"
                     },
                     "subheader": {
