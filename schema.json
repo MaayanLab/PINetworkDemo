@@ -447,7 +447,7 @@
                 "endpoint": "/",
                 "label": "Term & Gene Search",
                 "type": "page",
-                "component": "KnowledgeGraph",
+                "component": "SimpleKnowledgeGraph",
                 "props": {
                     "init_function": "initialize_kg",
                     "initial_query": {
