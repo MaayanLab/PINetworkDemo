@@ -429,7 +429,7 @@
         "header": "Demo-KG",
         "title": "Demo-KG",
         "background": {
-            "backgroundColor": "#000",
+            "backgroundColor": "#33ccff",
             "contrastText": "#FFF"
         },
         "icon": {
