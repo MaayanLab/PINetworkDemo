@@ -444,10 +444,10 @@
         },
         "tabs": [
             {
-                "endpoint": "/simple",
-                "label": "Simple Term & Gene Search",
+                "endpoint": "/",
+                "label": "Term & Gene Search",
                 "type": "page",
-                "component": "SimpleKnowledgeGraph",
+                "component": "KnowledgeGraph",
                 "props": {
                     "init_function": "initialize_kg",
                     "initial_query": {
@@ -462,10 +462,10 @@
                 }
             },
             {
-                "endpoint": "/",
-                "label": "Term & Gene Search",
+                "endpoint": "/simple",
+                "label": "Simple Term & Gene Search",
                 "type": "page",
-                "component": "KnowledgeGraph",
+                "component": "SimpleKnowledgeGraph",
                 "props": {
                     "init_function": "initialize_kg",
                     "initial_query": {
