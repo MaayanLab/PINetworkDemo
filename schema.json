@@ -3,8 +3,8 @@
         {
             "node": "Publications",
             "example": [
-                39615218,
-                39827879
+                38648692,
+                39089348
             ],
             "display": [
                 {
@@ -37,7 +37,8 @@
             "search": [
                 "id",
                 "label"
-            ]
+            ],
+            "color": "#ADB2D4"
         },
         {
             "node": "Awards",
@@ -71,13 +72,14 @@
             "search": [
                 "id",
                 "label"
-            ]
+            ],
+            "color": "#C7D9DD"
         },
         {
             "node": "Authors",
             "example": [
-                "Sara Alibrandi",
-                "Angela Clemens"
+                "Yaguang Wei",
+                "Heresh Amini"
             ],
             "display": [
                 {
@@ -95,7 +97,8 @@
             "search": [
                 "id",
                 "label"
-            ]
+            ],
+            "color": "#D5E5D5"
         },
         {
             "node": "MeSH",
@@ -119,7 +122,8 @@
             "search": [
                 "id",
                 "label"
-            ]
+            ],
+            "color": "#EEF1DA"
         }
     ],
     "edges": [
@@ -263,12 +267,27 @@
             "display": [
                 {
                     "label": "source label",
-                    "text": "${source label}",
+                    "text": "${source_label}",
                     "type": "text"
                 },
                 {
                     "label": "target label",
-                    "text": "${target label}",
+                    "text": "${target_label}",
+                    "type": "text"
+                },
+                {
+                    "label": "relation",
+                    "text": "${relation}",
+                    "type": "text"
+                },
+                {
+                    "label": "source",
+                    "text": "${source}",
+                    "type": "text"
+                },
+                {
+                    "label": "target",
+                    "text": "${target}",
                     "type": "text"
                 }
             ]
@@ -281,12 +300,27 @@
             "display": [
                 {
                     "label": "target label",
-                    "text": "${target label}",
+                    "text": "${target_label}",
                     "type": "text"
                 },
                 {
                     "label": "source label",
-                    "text": "${source label}",
+                    "text": "${source_label}",
+                    "type": "text"
+                },
+                {
+                    "label": "relation",
+                    "text": "${relation}",
+                    "type": "text"
+                },
+                {
+                    "label": "source",
+                    "text": "${source}",
+                    "type": "text"
+                },
+                {
+                    "label": "target",
+                    "text": "${target}",
                     "type": "text"
                 }
             ]
@@ -405,7 +439,8 @@
             "alt": "Demo-KG",
             "key": "Demo-KG_logo",
             "width": 100,
-            "height": 60
+            "height": 60,
+            "avatar": true
         },
         "tabs": [
             {
