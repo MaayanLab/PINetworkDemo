@@ -460,6 +460,16 @@
                         "query_field": "relation"
                     }
                 }
+            },
+            {
+                "endpoint": "/downloads",
+                "label": "Downloads",
+                "type": "page",
+                "component": "Download",
+                "position": "bottom",
+                "props": {
+                    "src": "link to download.json"
+                }
             }
         ]
     },
