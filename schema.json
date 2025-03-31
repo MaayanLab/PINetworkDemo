@@ -468,7 +468,7 @@
                 "component": "Download",
                 "position": "bottom",
                 "props": {
-                    "src": "link to download.json"
+                    "src": "https://raw.githubusercontent.com/MaayanLab/CoauthorshipNetworkDemo/refs/heads/main/downloads.json"
                 }
             }
         ]
