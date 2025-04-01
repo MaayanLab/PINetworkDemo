@@ -113,7 +113,6 @@ for directory in directories:
         match = re.match(node_pattern, filename).groupdict()
         entity = match["entity"]
         label = match["label"].replace("_", " ")
-        print(label)
         n = label
         if len(label.split(" ")) > 1:
           n = "`%s`"%label
@@ -125,13 +124,13 @@ for directory in directories:
         for k,row in df.iterrows():
           v = {}
           for i,j in row.items():
-            if type(j) == str:
-              v[i] = j
-            elif not np.isnan(j):
-              v[i] = int(j)
+            if pd.isna(j):
+              continue
+            # Convert all values to strings
+            v[i] = str(j)
           if k not in node_dict:
             node_dict[k] = {
-              "id": k,
+              "id": str(k),
               **v
             }
           else:
@@ -139,7 +138,6 @@ for directory in directories:
               **node_dict[k],
               **v
             }
-        print(n)
         r = ingest_node(n, list(node_dict.values()))
 
     for filename in glob(directory + "/*.edges.csv"):

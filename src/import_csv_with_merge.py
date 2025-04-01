@@ -42,6 +42,9 @@ def index_nodes(node_type, name):
 
 def ingest_node(node_type, nodes, limit=10000):
 	success = True
+	nodes = [
+        {k: str(v) if k != 'id' else v for k, v in node.items()} for node in nodes
+    ]
 	with GraphDatabase.driver(os.getenv('NEO4J_URL'), auth=(os.getenv('NEO4J_USER'), os.getenv('NEO4J_PASSWORD'))) as driver:
 		with driver.session(database="neo4j") as session:
 			skip = 0
@@ -113,7 +116,6 @@ for directory in directories:
         match = re.match(node_pattern, filename).groupdict()
         entity = match["entity"]
         label = match["label"].replace("_", " ")
-        print(label)
         n = label
         if len(label.split(" ")) > 1:
           n = "`%s`"%label
@@ -127,8 +129,11 @@ for directory in directories:
           for i,j in row.items():
             if type(j) == str:
               v[i] = j
-            elif not np.isnan(j):
+            elif not np.isnan(j) and i != "id":
+              v[i] = str(j)
+            elif not np.isnan(j) and i == "id":
               v[i] = int(j)
+
           if k not in node_dict:
             node_dict[k] = {
               "id": k,
@@ -139,7 +144,6 @@ for directory in directories:
               **node_dict[k],
               **v
             }
-        print(n)
         r = ingest_node(n, list(node_dict.values()))
 
     for filename in glob(directory + "/*.edges.csv"):
@@ -161,4 +165,5 @@ for directory in directories:
         meta = ",\n".join(meta)
         success = ingest_edges(relation, meta, source_type, target_type, edges)
         if not success:
+          print("NOT SUCCESS")
           break
