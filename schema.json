@@ -132,6 +132,8 @@
                 "Publications"
             ],
             "selected": true,
+	    "color":"#C7D9DD",
+	    "directed": "triangle",
             "display": [
                 {
                     "label": "target label",
