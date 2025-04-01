@@ -3,8 +3,8 @@
         {
             "node": "Publications",
             "example": [
-                38648692,
-                39089348
+                "38648692",
+                "39089348"
             ],
             "display": [
                 {
@@ -35,7 +35,6 @@
             ],
             "relation": [],
             "search": [
-                "id",
                 "label"
             ],
             "color": "#ADB2D4"
@@ -70,7 +69,6 @@
             ],
             "relation": [],
             "search": [
-                "id",
                 "label"
             ],
             "color": "#C7D9DD"
@@ -95,10 +93,9 @@
             ],
             "relation": [],
             "search": [
-                "id",
                 "label"
             ],
-            "color": "#ADB2D4"
+            "color": "#D5E5D5"
         },
         {
             "node": "MeSH",
@@ -120,7 +117,6 @@
             ],
             "relation": [],
             "search": [
-                "id",
                 "label"
             ],
             "color": "#EEF1DA"
@@ -132,8 +128,6 @@
                 "Publications"
             ],
             "selected": true,
-	    "color":"#C7D9DD",
-	    "directed": "triangle",
             "display": [
                 {
                     "label": "target label",
@@ -428,22 +422,20 @@
         }
     ],
     "header": {
-	"divider": true,
         "header": "Demo-KG",
         "title": "Demo-KG",
         "background": {
-            "backgroundColor": "#33ccff",
-            "contrastText": "#33ccff"
+            "backgroundColor": "#000",
+            "contrastText": "#FFF"
         },
         "icon": {
-            "src": "https://minio.dev.maayanlab.cloud/cfde-coauthor-network/EXLogo.png",
-            "favicon": "https://minio.dev.maayanlab.cloud/cfde-coauthor-network/EXLogo.png",
+            "src": "https://minio.dev.maayanlab.cloud/enrichr-kg/enrichr-kg.png",
+            "favicon": "https://minio.dev.maayanlab.cloud/enrichr-kg/enrichr-kg.png",
             "faviconTitle": "Demo-KG",
             "alt": "Demo-KG",
             "key": "Demo-KG_logo",
             "width": 100,
-            "height": 60,
-            "avatar": true
+            "height": 60
         },
         "tabs": [
             {
@@ -462,33 +454,6 @@
                         "url_field": "filter",
                         "query_field": "relation"
                     }
-                }
-            },
-            {
-                "endpoint": "/simple",
-                "label": "Simple Term & Gene Search",
-                "type": "page",
-                "component": "SimpleKnowledgeGraph",
-                "props": {
-                    "init_function": "initialize_kg",
-                    "initial_query": {
-                        "start": "Authors",
-                        "start_term": "Daniel J B Clarke",
-                        "start_field": "label"
-                    },
-                    "subheader": {
-                        "url_field": "filter",
-                        "query_field": "relation"
-                    }
-                }
-            },
-            {
-                "endpoint": "/downloads",
-                "label": "Downloads",
-                "type": "page",
-                "component": "Download",
-                "props": {
-                    "src": "https://raw.githubusercontent.com/MaayanLab/CoauthorshipNetworkDemo/refs/heads/main/downloads.json"
                 }
             }
         ]
@@ -549,5 +514,5 @@
         ],
         "footer_text": "<span style='color:white'>Please acknowledge Enrichr-KG in your publications by citing the following reference:<br><a style='color: cyan' href='https://doi.org/10.1093/nar/gkad393'>Evangelista JE, Xie Z, Marino GB, Nguyen N, Clarke DJB, Ma'ayan A. Enrichr-KG: bridging enrichment analysis across multiple libraries. Nucleic Acids Res. 2023 May 11:gkad393. doi: 10.1093/nar/gkad393. PMID: 37166973.</a></span>"
     },
-    "ui_theme": "cfde_theme"
+    "ui_theme": "enrichr_kg_theme"
 }
