@@ -431,7 +431,7 @@
         "title": "Demo-KG",
         "background": {
             "backgroundColor": "#33ccff",
-            "contrastText": "#FFF"
+            "contrastText": "#33ccff"
         },
         "icon": {
             "src": "https://minio.dev.maayanlab.cloud/enrichr-kg/enrichr-kg.png",
@@ -494,7 +494,7 @@
     },
     "footer": {
         "style": {
-            "background": "#000",
+            "background": "#03fc73",
             "color": "#FFF"
         },
         "layout": [
