@@ -434,8 +434,8 @@
             "contrastText": "#33ccff"
         },
         "icon": {
-            "src": "https://minio.dev.maayanlab.cloud/enrichr-kg/enrichr-kg.png",
-            "favicon": "https://minio.dev.maayanlab.cloud/enrichr-kg/enrichr-kg.png",
+            "src": "https://minio-console.dev.maayanlab.cloud/cfde-coauthor-network/EXLogo.png",
+            "favicon": "https://minio-console.dev.maayanlab.cloud/cfde-coauthor-network/EXLogo.png",
             "faviconTitle": "Demo-KG",
             "alt": "Demo-KG",
             "key": "Demo-KG_logo",
@@ -485,7 +485,6 @@
                 "label": "Downloads",
                 "type": "page",
                 "component": "Download",
-                "position": "bottom",
                 "props": {
                     "src": "https://raw.githubusercontent.com/MaayanLab/CoauthorshipNetworkDemo/refs/heads/main/downloads.json"
                 }
