@@ -426,6 +426,7 @@
         }
     ],
     "header": {
+	"divider": true,
         "header": "Demo-KG",
         "title": "Demo-KG",
         "background": {
