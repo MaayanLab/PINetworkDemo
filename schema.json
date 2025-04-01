@@ -434,8 +434,8 @@
             "contrastText": "#33ccff"
         },
         "icon": {
-            "src": "https://minio-console.dev.maayanlab.cloud/cfde-coauthor-network/EXLogo.png",
-            "favicon": "https://minio-console.dev.maayanlab.cloud/cfde-coauthor-network/EXLogo.png",
+            "src": "https://minio.dev.maayanlab.cloud/cfde-coauthor-network/EXLogo.png",
+            "favicon": "https://minio.dev.maayanlab.cloud/cfde-coauthor-network/EXLogo.png",
             "faviconTitle": "Demo-KG",
             "alt": "Demo-KG",
             "key": "Demo-KG_logo",
