@@ -25,12 +25,12 @@
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#d1d1d1"
      inkscape:zoom="0.96519721"
-     inkscape:cx="135.20553"
-     inkscape:cy="457.41947"
+     inkscape:cx="170.94952"
+     inkscape:cy="225.34255"
      inkscape:window-width="1600"
      inkscape:window-height="754"
-     inkscape:window-x="320"
-     inkscape:window-y="42"
+     inkscape:window-x="0"
+     inkscape:window-y="104"
      inkscape:window-maximized="0"
      inkscape:current-layer="svg35"
      inkscape:document-units="mm" />
@@ -118,7 +118,7 @@
   <g
      data-cell-id="qN4ilfexqhhgi6ABSrM1-6"
      id="g22"
-     transform="matrix(0.93553422,0,0,0.93553422,-505.7509,6.7381848)">
+     transform="translate(-545.75196,3.2247976)">
     <g
        id="g21">
       <image
@@ -165,7 +165,7 @@
      style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:18.6667px;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:center;writing-mode:lr-tb;direction:ltr;white-space:pre;shape-inside:url(#rect40);display:inline;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.66631;stroke-miterlimit:3;stroke-dasharray:none;stroke-opacity:1;paint-order:markers fill stroke"><tspan
        x="20.486642"
        y="28.261379"
-       id="tspan3">A</tspan></text>
+       id="tspan1">A</tspan></text>
   <path
      style="fill:#3386b6;fill-opacity:1;stroke:#000000;stroke-width:0.4;stroke-miterlimit:3;stroke-dasharray:none;stroke-opacity:1;paint-order:markers fill stroke"
      id="rect39-5"
@@ -184,5 +184,5 @@
      style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:18.6667px;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:center;writing-mode:lr-tb;direction:ltr;white-space:pre;shape-inside:url(#rect40-5);display:inline;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.66631;stroke-miterlimit:3;stroke-dasharray:none;stroke-opacity:1;paint-order:markers fill stroke"><tspan
        x="20.486642"
        y="28.261379"
-       id="tspan4">B</tspan></text>
+       id="tspan2">B</tspan></text>
 </svg>
