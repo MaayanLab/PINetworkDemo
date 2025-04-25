@@ -470,7 +470,7 @@
                     "props": {
                         "src": "https://minio.dev.maayanlab.cloud/enrichr-kg/enrichr-kg.png",
                         "alt": "enrichr-kg",
-                        "title": "Co-authorship KG",
+                        "title": "Demo-KG",
                         "color": "inherit",
                         "size": "small"
                     }
