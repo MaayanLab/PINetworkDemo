@@ -466,7 +466,7 @@
                     "initial_query": {
                         "start" : "Authors",
                         "start_term" : "Daniel J B Clarke",
-                        "start_field" : "label",
+                        "start_field" : "label"
                     },
                     "subheader": {
                         "url_field" : "filter",
