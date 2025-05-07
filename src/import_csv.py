@@ -81,13 +81,15 @@ def ingest_edges(relation, meta, source, target, edges, limit=10000):
 				try:
 					query = '''
 						UNWIND $batch as row
-						MATCH (n:%s), (m:%s)
-						WHERE n.id=row.source and m.id=row.target
+                        MATCH (n {id: row.source})
+                        WITH n, row
+                        MATCH (m {id: row.target})
+                        WITH m, n, row
 						CREATE (n)-[r:%s {
 							%s
 						}]->(m)
 
-					'''%(source, target, relation, meta)
+					'''%(relation, meta)
 					tx.run(query, {"batch": batch})
 					skip += limit
 					tx.commit()
