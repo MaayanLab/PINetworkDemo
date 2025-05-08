@@ -70,7 +70,7 @@ def ingest_node(node_type, nodes, limit=10000):
 				success = True			
 	return success
 
-def ingest_edges(relation, meta, source, target, edges, limit=10000):
+def ingest_edges(relation, meta, source, target, edges, limit=1000):
 	success = True
 	with GraphDatabase.driver(os.getenv('NEO4J_URL'), auth=(os.getenv('NEO4J_USER'), os.getenv('NEO4J_PASSWORD'))) as driver:
 		with driver.session(database="neo4j") as session:
@@ -78,18 +78,16 @@ def ingest_edges(relation, meta, source, target, edges, limit=10000):
 			while skip < len(edges):
 				batch = edges[skip: skip+limit]
 				tx = session.begin_transaction()
+				print(skip)
 				try:
 					query = '''
 						UNWIND $batch as row
-                        MATCH (n {id: row.source})
-                        WITH n, row
-                        MATCH (m {id: row.target})
-                        WITH m, n, row
+                        MATCH (n: %s), (m:%s)
+                        WHERE n.id = row.source and m.id = row.target
 						CREATE (n)-[r:%s {
 							%s
 						}]->(m)
-
-					'''%(relation, meta)
+					'''%(source, target, relation, meta)
 					tx.run(query, {"batch": batch})
 					skip += limit
 					tx.commit()
