@@ -3,8 +3,8 @@
         {
             "node": "Publications",
             "example": [
-                "38648692",
-                "39089348"
+                "39896457",
+                "39503777"
             ],
             "display": [
                 {
@@ -76,8 +76,8 @@
         {
             "node": "Authors",
             "example": [
-                "Yaguang Wei",
-                "Heresh Amini"
+                "James J Bieker",
+                "Timothy A Blenkinsop"
             ],
             "display": [
                 {
@@ -100,8 +100,8 @@
         {
             "node": "MeSH",
             "example": [
-                "14-3-3 Proteins",
-                "3T3-L1 Cells"
+                "5-Methoxytryptamine",
+                "8-Hydroxy-2'-Deoxyguanosine"
             ],
             "display": [
                 {
@@ -440,36 +440,18 @@
         "tabs": [
             {
                 "endpoint": "/",
-                "label": "Co-authorship Search",
+                "label": "Term & Gene Search",
                 "type": "page",
                 "component": "KnowledgeGraph",
                 "props": {
                     "init_function": "initialize_kg",
                     "initial_query": {
                         "start": "Authors",
-                        "start_term": "Daniel J B Clarke",
+                        "start_term": "Robert O Wright",
                         "start_field": "label"
                     },
                     "subheader": {
                         "url_field": "filter",
-                        "query_field": "relation"
-                    }
-                }
-            },
-            {
-                "endpoint": "/UseCase",
-                "label": "Use Case",
-                "type": "page",
-                "component": "SimpleKnowledgeGraph",
-                "props": {
-                    "init_function": "initialize_kg",
-                    "initial_query": {
-                        "start" : "Authors",
-                        "start_term" : "Daniel J B Clarke",
-                        "start_field" : "label"
-                    },
-                    "subheader": {
-                        "url_field" : "filter",
                         "query_field": "relation"
                     }
                 }
@@ -488,7 +470,7 @@
                     "props": {
                         "src": "https://minio.dev.maayanlab.cloud/enrichr-kg/enrichr-kg.png",
                         "alt": "enrichr-kg",
-                        "title": "Demo-KG",
+                        "title": "Enrichr-KG",
                         "color": "inherit",
                         "size": "small"
                     }
@@ -530,7 +512,7 @@
                 }
             ]
         ],
-        "footer_text": "<span style='color:white'>Please acknowledge Demo-KG ... /a></span>"
+        "footer_text": "<span style='color:white'>Please acknowledge Enrichr-KG in your publications by citing the following reference:<br><a style='color: cyan' href='https://doi.org/10.1093/nar/gkad393'>Evangelista JE, Xie Z, Marino GB, Nguyen N, Clarke DJB, Ma'ayan A. Enrichr-KG: bridging enrichment analysis across multiple libraries. Nucleic Acids Res. 2023 May 11:gkad393. doi: 10.1093/nar/gkad393. PMID: 37166973.</a></span>"
     },
     "ui_theme": "enrichr_kg_theme"
 }
