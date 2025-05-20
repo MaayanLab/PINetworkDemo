@@ -11,3 +11,4 @@ neo4j
 biopython
 notebook
 openpyxl
+networkx
