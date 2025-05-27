@@ -455,19 +455,6 @@
                         "query_field": "relation"
                     }
                 }
-            },
-            {
-                "endpoint": "/simple",
-                "label": "Simple Term & Gene Search",
-                "type": "page",
-                "component": "SimpleKnowledgeGraph",
-                "props": {
-                    "initial_query": {
-                        "start": "Authors",
-                        "start_term": "Robert O Wright",
-                        "start_field": "label"
-                    }
-                }
             }
         ]
     },
